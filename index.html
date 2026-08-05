@@ -182,7 +182,7 @@
   .top.scrolled::before{opacity:1}
   .top-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.6rem;
     height:var(--header-h);padding:0 clamp(1.2rem,3.4vw,2.6rem)}
-  .logo img{width:clamp(150px,16vw,196px);height:auto}
+  .site-logo img{width:clamp(150px,16vw,196px);height:auto}
   .top-links{display:flex;gap:1.9rem}
   .top-links a{font:600 .66rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--soft);
     padding:.5rem 0;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease}
@@ -248,8 +248,8 @@
   .on-light{background:var(--porcelain);color:var(--ink)}
   .sec-head{max-width:720px}
   .sec-head h2{font-size:clamp(2.1rem,1rem + 3vw,3.5rem)}
-  .sec-head.centered{margin:0 auto;text-align:center}
-  .sec-head.centered .kicker{justify-content:center}
+  .sec-head.sec-centered{margin:0 auto;text-align:center}
+  .sec-head.sec-centered .kicker{justify-content:center}
   .sec-cta{margin-top:2.6rem;display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
   .sec-cta .fine{font-size:.8rem;color:var(--dim)}
   #pillars .sec-cta{justify-content:center}
@@ -620,7 +620,7 @@
       form action, consent line
   18. Footer: brand line, addresses, contact, legal links, disclaimers
   VIDEO SLOTS ship with hidden <video> elements (no src) over ken-burns
-  fallback photos. To go live with a real clinic clip: add src="clip.mp4",
+  fallback photos. To go live with a real clinic clip: add a clip src,
   remove hidden. The fallback is the poster and reduced-motion state.
   Both forms are UNWIRED (action="#"): point them at the campaign intake
   webhook before ads run; the privacy link is live, legal stubs are not.
@@ -631,7 +631,7 @@
 <header class="top" id="top">
   <div class="top-inner">
     <!-- SWAP: logo image -->
-    <a class="logo" href="#top" aria-label="Biohackr Health, back to top">
+    <a class="site-logo" href="#top" aria-label="Biohackr Health, back to top">
       <img src="assets/logo-white.png" alt="Biohackr Health" width="720" height="120">
     </a>
     <nav class="top-links" aria-label="Primary">
@@ -772,7 +772,7 @@
   <!-- ================= 03 THE ARC (SIGNATURE) ================= -->
   <section class="sec raised" id="arc" aria-labelledby="h-arc">
     <div class="wrap">
-      <div class="sec-head centered">
+      <div class="sec-head sec-centered">
         <p class="kicker reveal"><span class="idx">03</span>The full arc</p>
         <!-- SWAP: arc headline + lede -->
         <h2 class="reveal" id="h-arc" style="--d:.08s">One transition, cared for at every&nbsp;stage.</h2>
@@ -949,7 +949,7 @@
   <!-- ================= 05 TEAM (PORCELAIN MEDALLIONS) ================= -->
   <section class="sec on-light" id="team" aria-labelledby="h-team">
     <div class="wrap">
-      <div class="sec-head centered">
+      <div class="sec-head sec-centered">
         <p class="kicker reveal"><span class="idx">05</span>Physician-led</p>
         <!-- SWAP: team headline + lede -->
         <h2 class="reveal" id="h-team" style="--d:.08s">Medical leadership you can&nbsp;trust.</h2>
@@ -984,7 +984,7 @@
   <!-- ================= 06 WHY BIOHACKR (SCENIC) ================= -->
   <section class="sec scenic" id="why" aria-labelledby="h-why">
     <div class="wrap">
-      <div class="sec-head centered">
+      <div class="sec-head sec-centered">
         <p class="kicker reveal"><span class="idx">06</span>Why Biohackr Health</p>
         <!-- SWAP: why headline + intro -->
         <h2 class="reveal" id="h-why" style="--d:.08s">Menopause care, done&nbsp;right.</h2>
@@ -1057,7 +1057,7 @@
   <!-- ================= 09 FAQ ================= -->
   <section class="sec" id="faq" aria-labelledby="h-faq">
     <div class="wrap">
-      <div class="sec-head centered">
+      <div class="sec-head sec-centered">
         <p class="kicker reveal"><span class="idx">09</span>Questions</p>
         <!-- SWAP: faq headline -->
         <h2 class="reveal" id="h-faq" style="--d:.08s">Good to&nbsp;know.</h2>
