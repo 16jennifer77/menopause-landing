@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<!--
+  BIOHACKR HEALTH : MENOPAUSE AND PERIMENOPAUSE GOOGLE ADS LANDING PAGE (2026-08-04)
+  Client page, not a library master. Lives at clients/biohackr/menopause-google-landing/.
+  Built to the locked master brief clients/biohackr/biohackr-menopause-womens-longevity-LP-MASTER-2026-06.md
+  (copy, compliance rules, offer, and team are taken from that file; it supersedes the June copy doc).
+  Sibling of clients/biohackr/botox-google-landing/ (same marine cinema brand system).
+
+  P0 SPEC (design-method + opus-method):
+  Concept sentence: "Marine cinema: the midlife arc drawn as one continuous line."
+  Ground: brand marine #001b3f (dark), porcelain #f3f5f9 light bands, one accent family
+  (blood red #e01919) + mint #9cd3ca support. Fonts: Prata display / Inter body (campaign family,
+  same as botox LP). Radius stance: square (medallion portraits excepted, by family convention).
+  THE SIGNATURE: THE ARC (section 03). A self-drawing SVG line: fluctuating through perimenopause,
+  a marked node at the 12 month point, settling into the years after. Three stage nodes bloom and
+  pulse; zone dividers and labels stage in. Labeled ILLUSTRATIVE (never lab data). Hidden on mobile
+  like the botox year card; fully drawn under reduced motion; pulses pause offscreen.
+
+  STEAL SHEET (opus-method):
+  1. clients/biohackr/botox-google-landing/index.html: tokens + primitives (kicker, btn, reveal,
+     plate, scenic), porcelain offer checklist with diamond ticks, medallion team cards, ledger
+     step rows with square thumbs, staged SVG draw pattern (fmap/uscale --fd delays + pulses),
+     form-card, film band slot pattern, GHL reviews widget, header backdrop, unwired-form honesty.
+  2. google-ad-templates/42-mens-forge.html: hormone-vertical honesty anatomy (hero shield
+     reassurance note, "not right for everyone" framing, details/summary FAQ hairline rows,
+     footer prescription-treatment disclaimer + emergency line).
+
+  SECTION PLAN (layout menu numbers from design-method; no two adjacent alike):
+  # | section      | layout                              | kicker                        | device
+  1 | hero         | 1 split: full-bleed plate + form    | WOMEN'S LONGEVITY             | ken-burns plate, staged reveals, shield note
+  2 | ticker       | marquee strip                       | (strip)                       | CSS marquee, duplicated track
+  3 | signs        | 5 numbered plates (4)               | 01 SOUND FAMILIAR?            | index caps, hover top-rule
+  4 | claim        | 3 asymmetric split, porcelain       | 02 THE OFFER                  | diamond checklist, price anchor
+  5 | arc          | full-width drawn diagram + captions | 03 THE FULL ARC               | SIGNATURE: self-drawing arc
+  6 | pillars      | 5 numbered plates (2x2)             | 04 HOW WE HELP                | index numbers, bullet ledgers
+  7 | team         | porcelain medallion row             | 05 PHYSICIAN-LED              | medallion portraits
+  8 | why          | scenic band + 4 standard plates     | 06 WHY BIOHACKR               | golden gate backdrop, pull line
+  9 | how          | 4 ledger rows with thumbs (3 steps) | 07 THE PROCESS                | ledger + square thumbs
+  10| treatments   | 6 scroll-snap rail                  | 08 A GLIMPSE INSIDE           | snap rail cards
+  11| reviews      | centered band                       | 09 REVIEWS                    | live GHL widget
+  12| faq          | hairline accordion rows             | 10 QUESTIONS                  | details/summary
+  13| skin         | quiet cross-sell strip              | ALSO FROM OUR CLINIC          | hairline strip
+  14| book         | 2 full-bleed bg split + form        | 11 YOUR NEXT STEP             | veiled room still, form card
+  15| footer       | rich footer                         |                               | hairlines, disclaimers
+
+  FACTS (from the master brief + biohackr.health, June 2026): offer = free 30 min women's
+  longevity consult, usually $100, no credit card. Dr. Lori Bluvas MD, board-certified OB/GYN,
+  25+ years, women's longevity and hormone optimization, Brown University training. Dr. Lauren
+  Greenberg MD, board-certified plastic surgeon, Dartmouth/Northwestern/Stanford, boutique
+  Stanford campus practice since 1999. Atousa Habibi RN, COO, 12+ years aesthetics and clinical
+  operations, former VP at Lookout Health. Locations: 1877 Union Street SF Marina + 540 Bryant
+  Street Palo Alto. Phone (650) 370-1588 is the deliberate LP tracking line (handoff-locked).
+  COMPLIANCE (master brief section 5, kept intact): no body/age shaming, no fear framing, no
+  outcome guarantees, hormone therapy routed through the consult and never promised, sexual
+  wellness one discreet clinical line, truthful scarcity only, strong medical disclaimer,
+  working privacy link, accurate NAP. No em dashes. No exclamation points.
+  MEDIA: real clinic photos from the EBOO and botox page libraries (faces are real clients and
+  staff), plus the approved people-free AI room still for the booking band. Hero and film band
+  carry the library video-slot pattern (hidden video + ken-burns fallback) so a real clinic
+  clip can drop in without surgery. No AI people, per brand rule.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SWAP: page title (match the ad group's search intent) -->
+<title>Menopause and Perimenopause Care San Francisco and Palo Alto | Biohackr Health</title>
+<!-- SWAP: meta description, 150 to 160 characters -->
+<meta name="description" content="Physician-led menopause, perimenopause, and hormone care, personalized to your biology. Claim a free menopause consult in San Francisco or Palo Alto.">
+<meta name="theme-color" content="#001b3f">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* MARINE CINEMA, women's longevity chapter. Brand marine ground, Prata/Inter,
+     red/mint accents. Every moving feature pauses offscreen, in hidden tabs,
+     and under reduced motion. */
+
+  /* SWAP: brand palette (edit these tokens only) */
+  :root{
+    --marine:#001b3f;
+    --marine-2:#04234c;
+    --marine-deep:#001228;
+    --red:#e01919;
+    --red-deep:#b31212;
+    --red-bright:#ff5f52;
+    --mint:#9cd3ca;
+    --porcelain:#f3f5f9;
+    --porcelain-2:#ffffff;
+    --text:#e9edf4;
+    --soft:rgba(233,237,244,.68);
+    --dim:rgba(233,237,244,.46);
+    --ink:#0e2447;
+    --ink-soft:#3c527a;
+    --hair:rgba(233,237,244,.16);
+    --hair-strong:rgba(233,237,244,.26);
+    --hair-ink:rgba(14,36,71,.18);
+    --wash:rgba(0,27,63,.24);
+    --disp:'Prata',Georgia,serif;
+    --body:'Inter','Helvetica Neue',Arial,sans-serif;
+    --ease:cubic-bezier(.17,.67,.3,1);
+    --header-h:78px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:clip}
+  body{
+    background:var(--marine);color:var(--text);
+    font-family:var(--body);font-size:1rem;line-height:1.7;
+    font-variant-numeric:tabular-nums;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  img,video{display:block;max-width:100%}
+  img{height:auto}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--red);color:#fff}
+  :focus-visible{outline:2px solid var(--red-bright);outline-offset:3px}
+  section[id]{scroll-margin-top:var(--header-h)}
+  body.no-scroll{overflow:hidden}
+
+  .skip-link{position:absolute;left:-999px;top:0;z-index:300;background:var(--red);color:#fff;
+    padding:.9rem 1.4rem;font:600 .78rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase}
+  .skip-link:focus{left:0}
+
+  .wrap{width:min(1160px,calc(100% - 52px));margin:0 auto}
+
+  /* ---------- primitives ---------- */
+  .kicker{display:inline-flex;align-items:center;gap:12px;margin-bottom:18px;
+    font:600 .68rem/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--red-bright)}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--red)}
+  .kicker .idx{color:var(--mint);letter-spacing:.18em}
+  .on-light .kicker{color:var(--red-deep)}
+  .on-light .kicker .idx{color:var(--ink-soft)}
+  h1,h2,h3{font-weight:400}
+  h1,h2{font-family:var(--disp);letter-spacing:.005em;line-height:1.08}
+  .h-lede{margin-top:1.15rem;max-width:62ch;color:var(--soft);font-size:1.02rem;line-height:1.75}
+  .on-light .h-lede{color:var(--ink-soft)}
+  .caps{font:600 .68rem/1.5 var(--body);letter-spacing:.22em;text-transform:uppercase}
+
+  .btn{display:inline-block;padding:1.02rem 2.1rem;background:var(--red);color:#fff;border:1px solid var(--red);
+    font:600 .74rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;
+    transition:background .25s ease,border-color .25s ease,transform .25s var(--ease)}
+  .btn:hover{background:var(--red-deep);border-color:var(--red-deep);transform:translateY(-2px)}
+  .btn:active{transform:translateY(-1px)}
+  .btn-ghost{background:transparent;border:1px solid var(--hair-strong);color:var(--text)}
+  .btn-ghost:hover{background:rgba(233,237,244,.06);border-color:var(--text);transform:translateY(-2px)}
+  .link-quiet{display:inline-block;font:600 .72rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;
+    color:var(--soft);border-bottom:1px solid var(--hair-strong);padding-bottom:.42rem;transition:color .2s ease,border-color .2s ease}
+  .link-quiet:hover{color:var(--text);border-color:var(--red-bright)}
+
+  .js .reveal{transform:translateY(20px);transition:transform .85s var(--ease) var(--d,0s)}
+  .js .reveal.in{transform:none}
+
+  .ph{filter:saturate(.82) contrast(1.06) brightness(.92)}
+  .plate{position:relative;overflow:hidden;background:var(--marine-2)}
+  .plate::after{content:"";position:absolute;inset:0;background:var(--wash);pointer-events:none}
+  @keyframes kenburns{0%{transform:scale(1.03)}100%{transform:scale(1.12) translate3d(-1.5%,-1%,0)}}
+  .kb{animation:kenburns 30s ease-in-out infinite alternate;transform-origin:50% 40%;will-change:transform}
+
+  .slot{position:relative;overflow:hidden;background:var(--marine-2)}
+  .slot video{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+  .slot video[hidden]{display:none}
+  .slot.video-live video{opacity:1}
+  .slot > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* SWAP: scenic backdrop (navy-tinted Golden Gate under marine washes) */
+  .scenic{position:relative}
+  .scenic::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,27,63,.86),rgba(0,27,63,.62) 46%,rgba(0,27,63,.9)),
+    url("assets/golden-gate-tinted.jpg") center 28%/cover no-repeat}
+  .scenic>.wrap{position:relative;z-index:1}
+
+  /* ---------- header ---------- */
+  .top{position:sticky;top:0;z-index:120}
+  .top::before{content:"";position:absolute;inset:0;background:rgba(0,18,40,.94);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--hair);opacity:0;transition:opacity .5s ease}
+  .top.scrolled::before{opacity:1}
+  .top-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.6rem;
+    height:var(--header-h);padding:0 clamp(1.2rem,3.4vw,2.6rem)}
+  .logo img{width:clamp(150px,16vw,196px);height:auto}
+  .top-links{display:flex;gap:1.9rem}
+  .top-links a{font:600 .66rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--soft);
+    padding:.5rem 0;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease}
+  .top-links a:hover{color:var(--text);border-color:var(--red-bright)}
+  .top-right{display:flex;align-items:center;gap:1.4rem}
+  .top-tel{font:600 .78rem/1 var(--body);letter-spacing:.08em;color:var(--soft);transition:color .2s ease}
+  .top-tel:hover{color:var(--text)}
+  .top .btn{padding:.78rem 1.35rem;font-size:.64rem}
+
+  /* ---------- hero: full-bleed plate, left copy, right form ---------- */
+  .hero{position:relative;display:flex;align-items:center;overflow:hidden}
+  .hero .slot{position:absolute;inset:0}
+  .hero-veil{position:absolute;inset:0;z-index:3;
+    background:linear-gradient(100deg,rgba(0,18,40,.95) 30%,rgba(0,27,63,.78) 58%,rgba(0,27,63,.52))}
+  .hero-core{position:relative;z-index:4;width:min(1160px,calc(100% - 52px));margin:0 auto;
+    display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2.4rem,5vw,4.6rem);align-items:center;
+    padding:clamp(4.6rem,10vh,7rem) 0}
+  .hero h1{font-size:clamp(2.2rem,1.3rem + 3.4vw,3.6rem);max-width:20ch}
+  .hero .form-card{width:100%;max-width:527px;justify-self:end}
+  .hero-sub{margin-top:1.5rem;max-width:52ch;font-size:1.02rem;line-height:1.78;color:var(--soft)}
+  .hero-ctas{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;margin-top:2.2rem}
+  .hero-proof{display:flex;gap:.8rem 1.8rem;flex-wrap:wrap;margin-top:2.3rem;color:var(--dim);
+    font:600 .64rem/1.7 var(--body);letter-spacing:.2em;text-transform:uppercase}
+  .hero-proof b{color:var(--mint);font-weight:600}
+  .hero-note{display:flex;align-items:center;gap:.7rem;margin-top:1.5rem;color:var(--dim);
+    font-size:.8rem;line-height:1.6;max-width:52ch}
+  .hero-note svg{width:19px;height:19px;flex:none;fill:none;stroke:var(--mint);stroke-width:1.7;stroke-linejoin:round}
+
+  /* ---------- form card (hero + booking share it) ---------- */
+  .form-card{background:var(--porcelain);color:var(--ink);padding:clamp(1.9rem,3.4vw,2.75rem);
+    border-top:3px solid var(--red);box-shadow:0 30px 80px rgba(0,10,24,.45)}
+  .form-card .f-kicker{font:600 .6rem/1.6 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--red-deep)}
+  .form-card h3{margin-top:.7rem;font:400 clamp(1.5rem,1.1rem + 1.2vw,1.9rem)/1.18 var(--disp)}
+  .form-card .sub{margin-top:.55rem;font-size:.86rem;color:var(--ink-soft)}
+  .f-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.05rem 1.1rem;margin-top:1.6rem}
+  .f-field{display:flex;flex-direction:column;gap:.4rem}
+  .f-field label{font:600 .6rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+  .f-field input,.f-field select{width:100%;padding:.95rem 1rem;border:1px solid var(--hair-ink);
+    background:#fff;color:var(--ink);font:500 .95rem/1.3 var(--body);border-radius:0;
+    transition:border-color .2s ease}
+  .f-field select{appearance:none;-webkit-appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%230e2447' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right .9rem center}
+  .f-field input:focus,.f-field select:focus{outline:none;border-color:var(--red)}
+  .form-card .btn{width:100%;margin-top:1.5rem;text-align:center}
+  .f-note{margin-top:.95rem;font-size:.73rem;line-height:1.6;color:var(--ink-soft);text-align:center}
+  .f-status{margin-top:.9rem;font:600 .74rem/1.5 var(--body);color:var(--red-deep);text-align:center;display:none}
+  .f-status.show{display:block}
+
+  /* ---------- ticker ---------- */
+  .ticker{background:var(--marine-2);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
+    overflow:hidden;padding:1rem 0}
+  .tick-track{display:flex;align-items:center;width:max-content;animation:tick 38s linear infinite}
+  .ticker:hover .tick-track{animation-play-state:paused}
+  @keyframes tick{to{transform:translateX(-50%)}}
+  .tick-track span{flex:none;font:600 .66rem/1 var(--body);letter-spacing:.26em;text-transform:uppercase;
+    color:var(--soft);padding:0 1.6rem;display:flex;align-items:center;gap:3.2rem}
+  .tick-track span::after{content:"";width:5px;height:5px;background:var(--mint);transform:rotate(45deg);opacity:.7}
+
+  /* ---------- shared section rhythm ---------- */
+  .sec{padding:clamp(74px,9.5vw,120px) 0}
+  .sec.raised{background:var(--marine-2)}
+  .on-light{background:var(--porcelain);color:var(--ink)}
+  .sec-head{max-width:720px}
+  .sec-head h2{font-size:clamp(2.1rem,1rem + 3vw,3.5rem)}
+  .sec-head.centered{margin:0 auto;text-align:center}
+  .sec-head.centered .kicker{justify-content:center}
+  .sec-cta{margin-top:2.6rem;display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
+  .sec-cta .fine{font-size:.8rem;color:var(--dim)}
+  #pillars .sec-cta{justify-content:center}
+
+  /* ---------- 01 signs: numbered plates ---------- */
+  .signs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);
+    border:1px solid var(--hair);margin-top:clamp(2.4rem,5vw,3.6rem)}
+  .sign{position:relative;background:var(--marine);padding:1.7rem 1.4rem 1.6rem;transition:background .3s ease}
+  .sign:hover{background:var(--marine-2)}
+  .sign::after{content:"";position:absolute;left:1.4rem;right:1.4rem;top:0;height:2px;background:var(--red);
+    transform:scaleX(0);transform-origin:left center;transition:transform .45s var(--ease)}
+  .sign:hover::after{transform:scaleX(1)}
+  .sign .caps{color:var(--mint);font-size:.56rem;letter-spacing:.26em}
+  .sign h3{margin-top:.85rem;font:400 1.3rem/1.3 var(--disp);color:var(--text)}
+  .sign p{margin-top:.6rem;font-size:.88rem;line-height:1.65;color:var(--soft)}
+  .signs-line{margin-top:2.6rem;font:400 clamp(1.4rem,1rem + 1.4vw,2rem)/1.35 var(--disp);color:var(--text);max-width:34ch}
+  .signs-line strong{font-weight:400;color:var(--red-bright)}
+
+  /* ---------- 02 claim band (porcelain) ---------- */
+  .claim-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.4rem,5vw,4.4rem);align-items:center}
+  .claim-copy h2{font-size:clamp(2.1rem,1rem + 3vw,3.5rem)}
+  .price-chip{display:inline-flex;align-items:baseline;gap:.7rem;margin-top:1.6rem;
+    border:1px solid var(--hair-ink);padding:.7rem 1.1rem}
+  .price-chip b{font:400 1.5rem/1 var(--disp);color:var(--red-deep)}
+  .price-chip s{color:var(--ink-soft);font-size:.95rem}
+  .price-chip span{font:600 .6rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-size:.66rem}
+  .perks{list-style:none;margin-top:0}
+  .perks li{position:relative;padding:1rem 0 1rem 1.8rem;font-size:.95rem;line-height:1.65;color:var(--ink);
+    border-top:1px solid var(--hair-ink)}
+  .perks li:first-child{border-top:0}
+  .perks li::before{content:"";position:absolute;left:2px;top:1.55em;width:10px;height:10px;
+    border:1px solid var(--red);transform:rotate(45deg)}
+  .perks li strong{font-weight:600}
+
+  /* ---------- 03 the arc (signature) ---------- */
+  .arc-box{position:relative;margin:clamp(2.4rem,5vw,3.8rem) 0 0;border:1px solid var(--hair);
+    background:rgba(0,18,40,.5);padding:clamp(1.2rem,3vw,2.2rem) clamp(1rem,2.6vw,2rem) clamp(.9rem,2vw,1.4rem);
+    overflow:hidden}
+  .arc-svg{position:relative;width:100%;height:auto;display:block}
+  .arc-line{stroke:rgba(156,211,202,.65);stroke-width:2;fill:none;stroke-linecap:round}
+  .arc-line.soft{stroke:rgba(233,237,244,.3);stroke-width:1.4}
+  .arc-line.zone{stroke:rgba(233,237,244,.2);stroke-width:1;stroke-dasharray:3 5}
+  .arc-dot{fill:var(--red-bright);transform-origin:center;transform-box:fill-box}
+  .arc-ring{fill:none;stroke:var(--red-bright);stroke-width:1.4;transform-origin:center;transform-box:fill-box}
+  .arc-pulse{fill:none;stroke:var(--red-bright);stroke-width:1.3;opacity:0;
+    transform-origin:center;transform-box:fill-box}
+  .arc-box.live .arc-svg.in .arc-pulse{animation:arcPulse 3.8s ease-out infinite;animation-delay:var(--pd,0s)}
+  @keyframes arcPulse{0%{transform:scale(.5);opacity:.6}70%{transform:scale(2.6);opacity:0}100%{transform:scale(2.6);opacity:0}}
+  .arc-label{font:600 12px var(--body);letter-spacing:.26em;fill:var(--mint)}
+  .arc-label.red{fill:var(--red-bright)}
+  .arc-sub{font:600 10.5px var(--body);letter-spacing:.24em;fill:rgba(233,237,244,.6)}
+  .js .arc-line{stroke-dasharray:1;stroke-dashoffset:1}
+  .js .arc-svg.in .arc-line{stroke-dashoffset:0;transition:stroke-dashoffset 1.4s ease var(--fd,0s)}
+  .js .arc-svg.in .arc-line.zone{transition-duration:.9s}
+  .js .arc-dot,.js .arc-ring{transform:scale(0);opacity:0;
+    transition:transform .55s var(--ease) var(--fd,0s),opacity .4s ease var(--fd,0s)}
+  .js .arc-svg.in .arc-dot,.js .arc-svg.in .arc-ring{transform:scale(1);opacity:1}
+  .js .arc-label,.js .arc-sub{opacity:0;transition:opacity .6s ease var(--fd,0s)}
+  .js .arc-svg.in .arc-label,.js .arc-svg.in .arc-sub{opacity:1}
+  .arc-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);
+    border:1px solid var(--hair);border-top:0;margin-top:0}
+  .arc-cap{background:var(--marine);padding:1.5rem 1.4rem 1.4rem;
+    appearance:none;-webkit-appearance:none;border:0;width:100%;text-align:left;color:inherit;
+    font-family:inherit;cursor:pointer;transition:background .25s ease,box-shadow .25s ease}
+  .arc-cap:hover{background:var(--marine-2)}
+  .arc-cap[aria-selected="true"]{background:var(--marine-2);box-shadow:inset 0 3px 0 var(--red)}
+  .arc-cap .caps{color:var(--mint);font-size:.56rem;letter-spacing:.26em}
+  .arc-cap h3{margin-top:.7rem;font:400 1.25rem/1.3 var(--disp);color:var(--text)}
+  .arc-cap p{margin-top:.5rem;font-size:.87rem;line-height:1.65;color:var(--soft)}
+  .arc-more{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;
+    font:600 .58rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);
+    transition:color .2s ease}
+  .arc-more svg{flex:none}
+  .arc-cap:hover .arc-more,.arc-cap[aria-selected="true"] .arc-more{color:var(--mint)}
+  .arc-panel{border:1px solid var(--hair);border-top:0;background:rgba(0,18,40,.5);
+    padding:clamp(1.7rem,3.6vw,2.7rem);display:grid;grid-template-columns:1.08fr .92fr;
+    gap:clamp(1.6rem,4vw,3.2rem);align-items:start}
+  .arc-panel[hidden]{display:none}
+  .arc-panel .stage-lede{font:400 clamp(1.15rem,1rem + .7vw,1.5rem)/1.55 var(--disp);color:var(--text)}
+  .arc-panel h4{font:600 .6rem/1 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--mint);margin-bottom:.9rem}
+  .arc-panel ul{margin:0;padding:0;list-style:none}
+  .arc-panel li{position:relative;padding:.55rem 0 .55rem 1.7rem;font-size:.9rem;line-height:1.6;
+    color:var(--soft);border-top:1px solid var(--hair)}
+  .arc-panel li:first-child{border-top:0}
+  .arc-panel li::before{content:"";position:absolute;left:0;top:.75rem;width:15px;height:15px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239cd3ca' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E") center/contain no-repeat}
+  .arc-panel .stage-cta{margin-top:1.2rem}
+  .arc-note{margin-top:1.4rem;font-size:.78rem;color:var(--dim);text-align:center}
+
+  /* ---------- 04 pillars ---------- */
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);
+    border:1px solid var(--hair);margin-top:clamp(2.4rem,5vw,3.6rem)}
+  .pillar{position:relative;background:var(--marine);padding:clamp(1.7rem,3vw,2.3rem);
+    transition:background .3s ease}
+  .pillar:hover{background:var(--marine-2)}
+  .pillar::after{content:"";position:absolute;left:clamp(1.7rem,3vw,2.3rem);right:clamp(1.7rem,3vw,2.3rem);
+    top:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left center;transition:transform .45s var(--ease)}
+  .pillar:hover::after{transform:scaleX(1)}
+  .pillar .p-no{font:400 1.9rem/1 var(--disp);color:var(--red-bright)}
+  .pillar .p-no::after{content:"";display:block;width:26px;height:1px;margin-top:.5rem;background:var(--hair-strong)}
+  .pillar h3{margin-top:1.1rem;font:400 1.45rem/1.25 var(--disp);color:var(--text)}
+  .pillar>p{margin-top:.6rem;font-size:.92rem;line-height:1.7;color:var(--soft)}
+  .pillar ul{list-style:none;margin-top:1.1rem}
+  .pillar li{position:relative;padding:.42rem 0 .42rem 1.3rem;font-size:.87rem;line-height:1.55;color:var(--soft)}
+  .pillar li::before{content:"";position:absolute;left:2px;top:1.05em;width:8px;height:1px;background:var(--mint)}
+  .pillar .p-benefit{margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--hair);
+    font-size:.82rem;line-height:1.6;color:var(--mint)}
+
+  /* ---------- 05 team (porcelain medallions) ---------- */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.4rem);
+    margin-top:clamp(2.4rem,5vw,3.6rem)}
+  .member{background:var(--porcelain-2);border:1px solid var(--hair-ink);text-align:center;
+    padding:clamp(1.6rem,3vw,2.2rem) clamp(1.2rem,2.4vw,1.8rem);
+    transition:transform .35s var(--ease),border-color .35s ease}
+  .member:hover{transform:translateY(-4px);border-color:rgba(14,36,71,.34)}
+  .medal{width:min(64%,220px);margin:0 auto;padding:9px;border:1px solid var(--hair-ink);border-radius:50%}
+  .member .plate{border-radius:50%;background:#dfe5ee}
+  .member .plate::after{background:rgba(0,27,63,.08);border-radius:50%}
+  .member .plate img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%}
+  .member .plate img.warm{filter:saturate(.9) contrast(1.04) brightness(.95) sepia(.16)}
+  .member h3{margin-top:1.3rem;font:400 1.5rem/1.2 var(--disp);color:var(--ink)}
+  .member .caps{display:block;margin-top:.5rem;color:var(--red-deep);font-size:.6rem}
+  .member p{margin-top:.75rem;font-size:.9rem;line-height:1.68;color:var(--ink-soft)}
+
+  /* ---------- 06 why: standards plates over the bridge ---------- */
+  .standards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);
+    border:1px solid var(--hair);margin-top:clamp(2.4rem,5vw,3.6rem)}
+  .standard{position:relative;background:var(--marine);padding:1.7rem 1.4rem 1.6rem;transition:background .3s ease}
+  .standard:hover{background:var(--marine-2)}
+  .standard .caps{color:var(--mint);font-size:.56rem;letter-spacing:.26em}
+  .standard h3{margin-top:.85rem;font:400 1.3rem/1.3 var(--disp);color:var(--text)}
+  .standard p{margin-top:.6rem;font-size:.88rem;line-height:1.65;color:var(--soft)}
+  .guess-line{margin-top:3rem;text-align:center}
+  .guess-line p{font:400 clamp(1.6rem,1rem + 2vw,2.5rem)/1.3 var(--disp);color:var(--text)}
+  .guess-line p strong{font-weight:400;color:var(--red-bright)}
+  .guess-line .btn{margin-top:1.8rem}
+
+  /* ---------- 07 how: ledger rows ---------- */
+  .steps{border-top:1px solid var(--hair);margin-top:clamp(2rem,4vw,3rem)}
+  .step{display:grid;grid-template-columns:84px 1.05fr 1.6fr 128px;gap:clamp(1.2rem,3vw,2.6rem);
+    align-items:center;padding:clamp(1.5rem,3vw,2.1rem) .2rem;border-bottom:1px solid var(--hair);
+    transition:background .3s ease}
+  .step:hover{background:rgba(233,237,244,.03)}
+  .step-no{font:400 1.9rem/1 var(--disp);color:var(--red-bright)}
+  .step-no::after{content:"";display:block;width:26px;height:1px;margin-top:.5rem;background:var(--hair-strong)}
+  .step h3{font:600 1.02rem/1.4 var(--body);letter-spacing:.01em;color:var(--text)}
+  .step p{font-size:.94rem;line-height:1.7;color:var(--soft)}
+  .step .plate{width:128px}
+  .step .plate img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform 1.2s var(--ease)}
+  .step:hover .plate img{transform:scale(1.05)}
+  .how-note{margin-top:1.6rem;font-size:.8rem;color:var(--dim);max-width:70ch;margin-left:auto;margin-right:auto;text-align:center}
+
+  /* ---------- film band ---------- */
+  .film{position:relative;height:clamp(380px,56vh,600px);overflow:hidden}
+  .film > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .film video{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+  .film video[hidden]{display:none}
+  .film.video-live video{opacity:1}
+  .film-scrim{position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;
+    padding:clamp(1.4rem,3.4vw,2.6rem);
+    background:linear-gradient(180deg,rgba(0,27,63,.55),rgba(0,27,63,.06) 44%,rgba(0,27,63,.66))}
+  .film-scrim .caps{color:var(--text);font-size:.64rem;letter-spacing:.3em;display:inline-flex;align-items:center;gap:10px}
+  .film-scrim .caps::before{content:"";width:22px;height:2px;background:var(--red);flex:none}
+  .film-scrim .caps.quiet::before{background:var(--mint)}
+  .film-scrim .caps.quiet{color:var(--soft)}
+
+  /* ---------- 08 treatments rail ---------- */
+  .rail-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:clamp(2rem,4vw,3rem)}
+  .rail-head h2{font-size:clamp(2.1rem,1rem + 3vw,3.5rem);max-width:18ch}
+  .rail-nav{display:flex;gap:.7rem;flex:none}
+  .rail-btn{width:46px;height:46px;display:grid;place-items:center;background:transparent;color:var(--text);
+    border:1px solid var(--hair-strong);cursor:pointer;transition:border-color .2s ease,background .2s ease,transform .2s var(--ease)}
+  .rail-btn:hover{border-color:var(--red-bright);background:rgba(224,25,25,.08);transform:translateY(-2px)}
+  .rail-btn svg{width:16px;height:16px}
+  .rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(262px,27vw,340px);gap:clamp(1rem,2vw,1.6rem);
+    overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;scrollbar-width:thin;
+    scrollbar-color:rgba(224,25,25,.5) rgba(233,237,244,.06)}
+  .rail::-webkit-scrollbar{height:6px}
+  .rail::-webkit-scrollbar-track{background:rgba(233,237,244,.06)}
+  .rail::-webkit-scrollbar-thumb{background:rgba(224,25,25,.5)}
+  .tcard{scroll-snap-align:start;border:1px solid var(--hair);background:rgba(0,18,40,.4);
+    display:flex;flex-direction:column;transition:border-color .3s ease,transform .3s var(--ease)}
+  .tcard:hover{border-color:rgba(224,25,25,.55);transform:translateY(-4px)}
+  .tcard .plate img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s var(--ease)}
+  .tcard:hover .plate img{transform:scale(1.05)}
+  .tcard-body{padding:1.3rem 1.3rem 1.4rem}
+  .tcard .caps{color:var(--red-bright);font-size:.58rem}
+  .tcard h3{margin-top:.55rem;font:400 1.35rem/1.25 var(--disp);color:var(--text)}
+  .tcard p{margin-top:.5rem;font-size:.9rem;line-height:1.66;color:var(--soft)}
+  .rail-note{margin-top:1.4rem;font-size:.8rem;color:var(--dim)}
+  @media (min-width:941px){
+    .rail{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);grid-auto-columns:auto;
+      overflow-x:visible;scroll-snap-type:none;padding:4px}
+    .rail-nav{display:none}
+  }
+
+  /* ---------- google reviews band ---------- */
+  .g-reviews{text-align:center}
+  .g-reviews .stars{font:600 .62rem/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem}
+  .g-reviews .g-frame{position:relative}
+  .g-reviews .g-loading{position:absolute;inset:0;display:grid;place-items:center;font:600 .68rem/1.6 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .g-reviews iframe{display:block;width:100%;max-width:100% !important;min-height:360px;border:0;border-radius:2px;position:relative;z-index:1;background:transparent}
+  .g-reviews .g-link{display:inline-block;margin-top:1.7rem;font:600 .66rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--text);border:1px solid var(--hair-strong);padding:.95rem 1.5rem;text-decoration:none;transition:border-color .3s ease}
+  .g-reviews .g-link:hover{border-color:var(--red)}
+
+  /* ---------- 10 faq ---------- */
+  .faq{max-width:860px;margin:clamp(2rem,4vw,3rem) auto 0;border-top:1px solid var(--hair);counter-reset:q}
+  .faq details{border-bottom:1px solid var(--hair);counter-increment:q}
+  .faq summary{position:relative;display:flex;align-items:center;justify-content:flex-start;gap:1.4rem;
+    padding:1.35rem .2rem;cursor:pointer;list-style:none;
+    font:400 clamp(1.05rem,.95rem + .5vw,1.3rem)/1.4 var(--disp);color:var(--text);
+    transition:color .2s ease}
+  .faq summary::before{content:"0" counter(q);flex:none;font:600 .62rem/1 var(--body);letter-spacing:.2em;color:var(--mint);padding-top:.24em}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--red-bright)}
+  .faq summary .pm{position:relative;flex:none;width:15px;height:15px;margin-left:auto}
+  .faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;background:var(--red-bright);
+    transition:transform .3s var(--ease)}
+  .faq summary .pm::before{left:0;top:7px;width:15px;height:1.5px}
+  .faq summary .pm::after{left:7px;top:0;width:1.5px;height:15px}
+  .faq details[open] .pm::after{transform:scaleY(0)}
+  .faq .ans{padding:0 3rem 1.5rem .2rem;font-size:.94rem;line-height:1.75;color:var(--soft);max-width:64ch}
+
+  /* ---------- skin cross-sell strip ---------- */
+  .skin{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .skin-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;
+    padding:clamp(2rem,4vw,3rem) 0}
+  .skin h2{font-size:clamp(1.5rem,1rem + 1.6vw,2.1rem)}
+  .skin p{margin-top:.6rem;font-size:.92rem;color:var(--soft);max-width:52ch}
+  .skin-ctas{display:flex;gap:1rem;flex:none;flex-wrap:wrap}
+
+  /* ---------- booking finale ---------- */
+  .book{position:relative;overflow:hidden}
+  .book > .bg{position:absolute;inset:0}
+  .book > .bg img{width:100%;height:100%;object-fit:cover}
+  .book > .bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(100deg,rgba(0,18,40,.96) 34%,rgba(0,27,63,.87) 60%,rgba(0,27,63,.72))}
+  .book-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr .95fr;
+    gap:clamp(2.4rem,5.5vw,5rem);align-items:center;padding:clamp(80px,10vw,128px) 0 clamp(40px,5.5vw,64px)}
+  .book-copy h2{font-size:clamp(2.1rem,1rem + 3vw,3.5rem)}
+  .book-tel{display:inline-block;margin-top:1.9rem;font:400 1.7rem/1 var(--disp);color:var(--text);
+    border-bottom:1px solid var(--hair-strong);padding-bottom:.4rem;transition:border-color .2s ease}
+  .book-tel:hover{border-color:var(--red-bright)}
+  .book-meta{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:520px}
+  .book-meta .caps{color:var(--mint);font-size:.58rem}
+  .book-meta p{margin-top:.45rem;font-size:.88rem;line-height:1.7;color:var(--soft)}
+  .book .form-card{box-shadow:none}
+
+  /* ---------- footer ---------- */
+  .footer{background:var(--marine-deep);color:var(--dim);padding:clamp(3rem,6vw,4.5rem) 0 1.6rem;
+    border-top:1px solid var(--hair)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr .9fr;gap:2.4rem}
+  .foot-brand img{width:170px}
+  .foot-brand p{margin-top:1.2rem;font-size:.86rem;line-height:1.75;max-width:30em}
+  .footer h3{font:600 .62rem/1 var(--body);letter-spacing:.3em;text-transform:uppercase;
+    color:var(--mint);margin-bottom:1.1rem}
+  .footer address{font-style:normal;font-size:.88rem;line-height:1.85}
+  .footer address strong{color:var(--soft);font-weight:600}
+  .foot-links a{display:block;padding:.3rem 0;font-size:.86rem;transition:color .2s ease}
+  .foot-links a:hover,.footer address a:hover{color:var(--text)}
+  .addr-link{color:inherit;text-decoration:none}
+  .addr-link:hover{text-decoration:underline;text-decoration-color:rgba(233,237,244,.5);text-underline-offset:3px}
+  .foot-legal{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--hair);text-align:center;
+    font-size:.76rem;line-height:1.7;color:rgba(233,237,244,.62)}
+  .foot-legal p + p{margin-top:.5rem}
+  .foot-legal .pp-link{color:inherit;text-decoration:none}
+  .foot-legal .pp-link:hover{text-decoration:underline;text-underline-offset:3px}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1060px){
+    .signs{grid-template-columns:repeat(2,1fr)}
+    .standards{grid-template-columns:repeat(2,1fr)}
+    .step{grid-template-columns:64px 1fr 110px;grid-template-rows:auto auto}
+    .step h3{grid-column:2}
+    .step p{grid-column:2;grid-row:2}
+    .step .plate{grid-column:3;grid-row:1/3;width:110px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:940px){
+    .top-links{display:none}
+    .hero-core{grid-template-columns:1fr;gap:2.6rem}
+    .claim-grid{grid-template-columns:1fr}
+    .team-grid{grid-template-columns:repeat(2,1fr)}
+    .rail-head{flex-direction:column;align-items:flex-start;gap:1.2rem}
+    .skin-inner{flex-direction:column;align-items:flex-start}
+    .arc-caps{grid-template-columns:1fr}
+    .arc-panel{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .wrap{width:calc(100% - 52px)}
+    .hero-core{padding:2.4rem 0 2.6rem}
+    .hero-ctas .link-quiet{display:none}
+    .hero-note{display:none}
+    .signs{grid-template-columns:1fr}
+    .standards{grid-template-columns:1fr}
+    .team-grid{grid-template-columns:1fr;max-width:420px}
+    .pillars{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr}
+    .book-grid{grid-template-columns:1fr;gap:2rem}
+    .book-meta{grid-template-columns:1fr 1fr;max-width:none}
+    .top-tel{display:none}
+    .top .btn{padding:.7rem .95rem;font-size:.6rem;letter-spacing:.16em;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+    .foot-links a{min-height:44px;display:flex;align-items:center}
+    .book-tel{min-height:44px;display:inline-flex;align-items:center}
+    .rail{grid-auto-columns:84vw}
+    .arc-box{display:none}
+    .step{display:grid;grid-template-columns:1fr 94px;grid-template-rows:auto auto auto;gap:.5rem 1rem;padding:1.45rem 0}
+    .step p.step-no{grid-area:1/1/2/2;font-size:1.1rem}
+    .step h3{grid-area:2/1/3/2}
+    .step p{grid-area:3/1/4/2;font-size:.9rem}
+    .step .plate{grid-area:1/2/4/3;width:94px;align-self:center;justify-self:end}
+    .film{height:clamp(300px,52vh,430px)}
+    .film-scrim .caps{max-width:44%}
+    .film-scrim .caps.quiet{text-align:right}
+    .g-reviews iframe{min-height:0;height:560px !important}
+    .sec{padding:48px 0}
+    .tick-track span{font-size:.56rem;padding:0 1rem;gap:1.6rem}
+    .faq .ans{padding-right:1rem}
+  }
+
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;
+      transition-duration:.01ms !important;transition-delay:0s !important}
+    .js .reveal{transform:none}
+    .kb{animation:none}
+    .tick-track{animation:none}
+    .js .arc-line{stroke-dasharray:none;stroke-dashoffset:0}
+    .js .arc-dot,.js .arc-ring{transform:scale(1);opacity:1}
+    .js .arc-label,.js .arc-sub{opacity:1}
+    .arc-pulse{display:none}
+  }
+</style>
+</head>
+<body>
+<!--
+  ============================================================
+  SWAP MANIFEST : every editable spot, in page order
+  ============================================================
+  Search the file for "SWAP:" to jump to each item.
+   1. <title> + meta description (head)
+   2. Header: logo, nav links, phone, CTA target
+   3. Hero: fallback photo (+ optional clip), kicker, headline,
+      subheadline, CTAs, trust chips, reassurance note, hero form
+   4. Ticker: service phrases
+   5. Signs: 4 plates + reassurance line + CTA
+   6. Claim band: headline, lead, price chip, 4 perks, CTA
+   7. Arc: headline, lede, diagram labels, 3 stage captions, footnote
+   8. Pillars: 4 plates (title, intro, bullets, benefit line) + CTA
+   9. Team: 3 medallion cards
+  10. Why: headline, intro, 4 standard plates, pull line, CTA
+  11. How: 3 ledger rows (title, copy, thumb) + small print
+  12. Film band: photo (+ optional clip) + captions
+  13. Treatments rail: 4 cards (photo, tag, title, copy) + note
+  14. Reviews: live widget + outbound link
+  15. FAQ: 7 pairs
+  16. Skin strip: headline, body, 2 buttons
+  17. Booking: headline, copy, phone, locations + hours, form fields,
+      form action, consent line
+  18. Footer: brand line, addresses, contact, legal links, disclaimers
+  VIDEO SLOTS ship with hidden <video> elements (no src) over ken-burns
+  fallback photos. To go live with a real clinic clip: add src="clip.mp4",
+  remove hidden. The fallback is the poster and reduced-motion state.
+  Both forms are UNWIRED (action="#"): point them at the campaign intake
+  webhook before ads run; the privacy link is live, legal stubs are not.
+  ============================================================
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="top-inner">
+    <!-- SWAP: logo image -->
+    <a class="logo" href="#top" aria-label="Biohackr Health, back to top">
+      <img src="assets/logo-white.png" alt="Biohackr Health" width="720" height="120">
+    </a>
+    <nav class="top-links" aria-label="Primary">
+      <a href="#pillars">How we help</a>
+      <a href="#how">The process</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="top-right">
+      <!-- SWAP: phone number (also update tel links below) -->
+      <a class="top-tel" href="tel:+16503701588">(650) 370-1588</a>
+      <!-- SWAP: header CTA target -->
+      <a class="btn" href="#claim">Claim free consult</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO: FULL-BLEED PLATE, COPY + FORM ================= -->
+  <section class="hero" id="claim" aria-labelledby="h-hero">
+    <div class="slot" data-autoplay>
+      <!-- SWAP: hero clip (to REVERT to the still: remove src and re-add the hidden attribute) -->
+      <video src="assets/hero-corridor-loop.mp4" muted loop playsinline preload="metadata"></video>
+      <!-- SWAP: hero fallback photo -->
+      <img class="ph kb" src="assets/hero-clinic-corridor-ai.jpg" width="1080" height="1920" alt="The Biohackr Health IV lounge: brass ring lights, sheer curtains, and leather recliners on a herringbone floor" loading="eager" decoding="async">
+    </div>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-core">
+      <div>
+        <!-- SWAP: hero kicker -->
+        <p class="kicker reveal">Menopause care, San Francisco and Palo Alto</p>
+        <!-- SWAP: hero headline (keep under 8 words) -->
+        <h1 class="reveal" id="h-hero" style="--d:.08s">Menopause symptoms, treated. Feel like you&nbsp;again.</h1>
+        <!-- SWAP: hero subheadline -->
+        <p class="hero-sub reveal" style="--d:.16s">Led by a board-certified OB/GYN with over 25 years of experience. Personalized treatment for perimenopause, menopause, and the years after, grounded in real testing instead of guesswork. Start with a free 30-minute consult, in person or by phone.</p>
+        <div class="hero-ctas reveal" style="--d:.24s">
+          <!-- SWAP: primary CTA -->
+          <a class="btn" href="#claim">Claim my free consult</a>
+          <!-- SWAP: secondary link -->
+          <a class="link-quiet" href="#pillars">Browse what we offer <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <!-- SWAP: hero trust chips -->
+        <p class="hero-proof reveal" style="--d:.32s"><span><b>Free</b> 30-minute consult</span> <span><b>OB/GYN</b> led care</span> <span><b>Two</b> Bay Area clinics</span></p>
+        <!-- SWAP: hero reassurance note -->
+        <p class="hero-note reveal" style="--d:.38s"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg>No treatment without a clinical evaluation, and hormone therapy is not right for everyone.</p>
+      </div>
+      <!-- SWAP: hero form action (point at the campaign intake webhook before launch) -->
+      <form class="form-card reveal" style="--d:.2s" action="#" method="post" aria-labelledby="h-form-hero">
+        <p class="f-kicker">Usually $100, free this month</p>
+        <h3 id="h-form-hero">Claim your free menopause consult</h3>
+        <p class="sub">30 minutes with our clinical team, in person or by phone.</p>
+        <div class="f-grid">
+          <div class="f-field"><label for="h-first">First name</label><input id="h-first" name="first_name" type="text" autocomplete="given-name" required></div>
+          <div class="f-field"><label for="h-last">Last name</label><input id="h-last" name="last_name" type="text" autocomplete="family-name" required></div>
+          <div class="f-field"><label for="h-email">Email</label><input id="h-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="f-field"><label for="h-phone">Phone</label><input id="h-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="f-field"><label for="h-loc">Preferred location</label>
+            <select id="h-loc" name="location" required>
+              <option value="" selected disabled>Select</option>
+              <option>San Francisco Marina</option>
+              <option>Palo Alto</option>
+            </select>
+          </div>
+          <div class="f-field"><label for="h-format">Consult preference</label>
+            <select id="h-format" name="format" required>
+              <option value="" selected disabled>Select</option>
+              <option>In-person</option>
+              <option>Phone call</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn" type="submit">Claim my free consult</button>
+        <p class="f-status" role="status" aria-live="polite"></p>
+        <!-- SWAP: consent line -->
+        <p class="f-note">No credit card required. By submitting, you agree to be contacted to schedule your appointment. Opt out anytime.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= TICKER ================= -->
+  <div class="ticker" aria-hidden="true">
+    <div class="tick-track">
+      <!-- SWAP: ticker service phrases (duplicated track, second half aria-hidden) -->
+      <span>Menopause and perimenopause care</span><span>Hormone optimization</span><span>Bioidentical hormone therapy</span><span>Thyroid and metabolism</span><span>Hormone and lab testing</span><span>IV and nutrient therapy</span><span>Bone and muscle health</span><span>Skin and hair</span><span>Comprehensive diagnostics</span>
+      <span>Menopause and perimenopause care</span><span>Hormone optimization</span><span>Bioidentical hormone therapy</span><span>Thyroid and metabolism</span><span>Hormone and lab testing</span><span>IV and nutrient therapy</span><span>Bone and muscle health</span><span>Skin and hair</span><span>Comprehensive diagnostics</span>
+    </div>
+  </div>
+
+  <!-- ================= 01 SIGNS ================= -->
+  <section class="sec" id="signs" aria-labelledby="h-signs">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker reveal"><span class="idx">01</span>Sound familiar?</p>
+        <!-- SWAP: signs headline -->
+        <h2 class="reveal" id="h-signs" style="--d:.08s">The changes no one warned you&nbsp;about.</h2>
+      </div>
+      <div class="signs">
+        <!-- SWAP: sign plates (4) -->
+        <article class="sign reveal"><span class="caps">01</span><h3>Hot flashes and night sweats</h3><p>Sudden heat, flushing, and sweats that interrupt your day, and your sleep.</p></article>
+        <article class="sign reveal" style="--d:.06s"><span class="caps">02</span><h3>Wired, tired, and awake at 3am</h3><p>Broken sleep and afternoon energy crashes, even when you are doing everything right.</p></article>
+        <article class="sign reveal" style="--d:.12s"><span class="caps">03</span><h3>Mood shifts and brain fog</h3><p>Anxiety, irritability, and a mental fog that just does not feel like you.</p></article>
+        <article class="sign reveal" style="--d:.18s"><span class="caps">04</span><h3>A body that feels different</h3><p>Changes in metabolism, body composition, and recovery, even when nothing else in your life changed.</p></article>
+      </div>
+      <!-- SWAP: signs reassurance line + CTA -->
+      <p class="signs-line reveal" style="--d:.2s">These changes are common, but you do not have to just <strong>live with&nbsp;them.</strong></p>
+      <div class="sec-cta reveal" style="--d:.26s">
+        <a class="btn" href="#claim">Claim my free menopause consult</a>
+        <p class="fine">Free consultation, takes 30 minutes, limited spots each month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 CLAIM BAND (PORCELAIN) ================= -->
+  <section class="sec on-light" id="offer" aria-labelledby="h-offer">
+    <div class="wrap">
+      <div class="claim-grid">
+        <div class="claim-copy">
+          <p class="kicker reveal"><span class="idx">02</span>The offer</p>
+          <!-- SWAP: claim headline + lead -->
+          <h2 class="reveal" id="h-offer" style="--d:.08s">Your free menopause&nbsp;consult.</h2>
+          <p class="h-lede reveal" style="--d:.16s">A complimentary 30-minute consultation with our clinical team, in person in San Francisco or Palo Alto, or by phone. We will talk through your symptoms, your history, and your goals, and map out a personalized plan for this stage of life.</p>
+          <div class="sec-cta reveal" style="--d:.28s">
+            <a class="btn" href="#claim">Claim my free consult</a>
+          </div>
+        </div>
+        <!-- SWAP: consult perks checklist -->
+        <ul class="perks reveal" style="--d:.2s">
+          <li>A real conversation about your symptoms: hot flashes, sleep, mood, energy, and more.</li>
+          <li>Honest guidance on which options fit you, including whether hormone therapy makes sense.</li>
+          <li>A clear, personalized menopause roadmap to take home.</li>
+          <li><strong>No credit card, no commitment, no pressure.</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 THE ARC (SIGNATURE) ================= -->
+  <section class="sec raised" id="arc" aria-labelledby="h-arc">
+    <div class="wrap">
+      <div class="sec-head centered">
+        <p class="kicker reveal"><span class="idx">03</span>The full arc</p>
+        <!-- SWAP: arc headline + lede -->
+        <h2 class="reveal" id="h-arc" style="--d:.08s">One transition, cared for at every&nbsp;stage.</h2>
+        <p class="h-lede reveal" style="--d:.16s">Perimenopause, menopause, and the years after are one continuous arc, not separate problems. Wherever you are on it, your care starts with where you are.</p>
+      </div>
+
+      <div class="arc-box reveal" style="--d:.2s">
+        <!-- The arc: hormone levels fluctuate through perimenopause, a marked node at
+             the 12 month point, then settle into the years after. Labeled illustrative;
+             the captions below carry the real content. Decorative; hidden on mobile,
+             fully drawn under reduced motion. -->
+        <svg class="arc-svg" viewBox="0 0 1180 300" aria-hidden="true" focusable="false">
+          <path class="arc-line zone" style="--fd:.4s" pathLength="1" d="M455 74 V236"/>
+          <path class="arc-line zone" style="--fd:.5s" pathLength="1" d="M800 74 V236"/>
+          <text class="arc-label" style="--fd:.5s" x="257" y="56" text-anchor="middle">PERIMENOPAUSE</text>
+          <text class="arc-label red" style="--fd:.9s" x="627" y="56" text-anchor="middle">MENOPAUSE</text>
+          <text class="arc-label" style="--fd:1.2s" x="990" y="56" text-anchor="middle">THE YEARS AFTER</text>
+          <path class="arc-line soft" style="--fd:0s" pathLength="1" d="M60 162 H1120"/>
+          <path class="arc-line" style="--fd:.15s" pathLength="1" d="M60 162 C84 124 108 124 132 162 S180 200 204 162 S252 124 276 162 S324 200 348 162 S396 124 420 162 S468 200 492 162 S540 124 564 162 S612 192 640 164 C700 128 740 196 800 162 C850 136 900 188 950 162 C1000 140 1060 182 1120 160"/>
+          <circle class="arc-ring" style="--fd:1s" cx="276" cy="162" r="14"/>
+          <circle class="arc-dot" style="--fd:1.05s" cx="276" cy="162" r="5.5"/>
+          <circle class="arc-pulse" cx="276" cy="162" r="14" style="--pd:0s"/>
+          <circle class="arc-ring" style="--fd:1.05s" cx="640" cy="164" r="17"/>
+          <circle class="arc-dot" style="--fd:1.1s" cx="640" cy="164" r="6.5"/>
+          <circle class="arc-pulse" cx="640" cy="164" r="17" style="--pd:.6s"/>
+          <circle class="arc-ring" style="--fd:1.1s" cx="950" cy="162" r="14"/>
+          <circle class="arc-dot" style="--fd:1.15s" cx="950" cy="162" r="5.5"/>
+          <circle class="arc-pulse" cx="950" cy="162" r="14" style="--pd:1.2s"/>
+          <text class="arc-sub" style="--fd:1.2s" x="276" y="238" text-anchor="middle">CAN BEGIN IN THE LATE 30s OR 40s</text>
+          <text class="arc-sub" style="--fd:1.15s" x="640" y="238" text-anchor="middle">THE 12 MONTH MARK</text>
+          <text class="arc-sub" style="--fd:1.2s" x="950" y="238" text-anchor="middle">A NEW BASELINE</text>
+          <text class="arc-sub" style="--fd:1.25s" x="590" y="284" text-anchor="middle" opacity=".7">HORMONE LEVELS ACROSS THE TRANSITION, ILLUSTRATIVE SHAPE, NOT LAB DATA</text>
+        </svg>
+      </div>
+
+      <div class="arc-caps" role="tablist" aria-label="The three stages of the menopause transition">
+        <!-- SWAP: arc stage captions (3, clickable tabs) -->
+        <button class="arc-cap reveal" style="--d:.1s" role="tab" id="arc-tab-1" aria-selected="true" aria-controls="arc-panel-1" type="button">
+          <span class="caps">Stage one</span>
+          <h3>Perimenopause</h3>
+          <p>The years of change that can begin in your late 30s or 40s. Cycles shift, and poor sleep, mood changes, and brain fog often arrive first.</p>
+          <span class="arc-more">Explore this stage<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </button>
+        <button class="arc-cap reveal" style="--d:.18s" role="tab" id="arc-tab-2" aria-selected="false" aria-controls="arc-panel-2" type="button" tabindex="-1">
+          <span class="caps">Stage two</span>
+          <h3>Menopause</h3>
+          <p>Marked at 12 months without a cycle. Hormone levels move toward a new normal, and symptoms can peak before they ease.</p>
+          <span class="arc-more">Explore this stage<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </button>
+        <button class="arc-cap reveal" style="--d:.26s" role="tab" id="arc-tab-3" aria-selected="false" aria-controls="arc-panel-3" type="button" tabindex="-1">
+          <span class="caps">Stage three</span>
+          <h3>The years after</h3>
+          <p>Post-menopause is its own chapter. Bone, heart, muscle, and metabolic health move to the center of the plan.</p>
+          <span class="arc-more">Explore this stage<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </button>
+      </div>
+      <!-- SWAP: arc stage panel 1 -->
+      <div class="arc-panel" role="tabpanel" id="arc-panel-1" aria-labelledby="arc-tab-1" tabindex="0">
+        <p class="stage-lede">Cycles shift, hormones fluctuate, and many women are told their bloodwork is normal while everything feels different. It usually is not nothing, and this is the stage where measuring early pays off.</p>
+        <div class="stage-care">
+          <h4>What care looks like here</h4>
+          <ul>
+            <li>A baseline hormone, thyroid, and metabolic panel, read by a physician.</li>
+            <li>A real review of sleep, mood, cycles, and symptoms, unhurried.</li>
+            <li>A plan that tracks the shift as it happens, not a one-time guess.</li>
+          </ul>
+          <p class="stage-cta"><a class="link-quiet" href="#claim">Tell us where you are, at your free consult <span aria-hidden="true">&rarr;</span></a></p>
+        </div>
+      </div>
+      <!-- SWAP: arc stage panel 2 -->
+      <div class="arc-panel" role="tabpanel" id="arc-panel-2" aria-labelledby="arc-tab-2" tabindex="0" hidden>
+        <p class="stage-lede">Symptoms like hot flashes, night sweats, and sleep disruption can peak before they ease. This is the stage where a personalized, physician-supervised plan matters most.</p>
+        <div class="stage-care">
+          <h4>What care looks like here</h4>
+          <ul>
+            <li>A full hormone and metabolic baseline before any recommendation.</li>
+            <li>An honest physician conversation about whether hormone therapy fits you.</li>
+            <li>Support for sleep, energy, mood, and body composition, monitored over time.</li>
+          </ul>
+          <p class="stage-cta"><a class="link-quiet" href="#claim">Map your options at a free consult <span aria-hidden="true">&rarr;</span></a></p>
+        </div>
+      </div>
+      <!-- SWAP: arc stage panel 3 -->
+      <div class="arc-panel" role="tabpanel" id="arc-panel-3" aria-labelledby="arc-tab-3" tabindex="0" hidden>
+        <p class="stage-lede">Post-menopause deserves the same attention as the transition. Bone, heart, muscle, and metabolic health take center stage, and the earlier they are measured, the more options you keep.</p>
+        <div class="stage-care">
+          <h4>What care looks like here</h4>
+          <ul>
+            <li>Bone and cardiovascular risk markers, tracked year over year.</li>
+            <li>Muscle, strength, and metabolism support that protects the long game.</li>
+            <li>Scheduled re-testing, so your plan ages as well as you do.</li>
+          </ul>
+          <p class="stage-cta"><a class="link-quiet" href="#claim">Start your baseline at a free consult <span aria-hidden="true">&rarr;</span></a></p>
+        </div>
+      </div>
+      <!-- SWAP: arc footnote -->
+      <p class="arc-note reveal" style="--d:.3s">Not sure which stage you are in? Most women are not. That is what the consult is for. The diagram is an illustrative shape, not lab data. Your levels are measured, never guessed.</p>
+    </div>
+  </section>
+
+  <!-- ================= 04 FOUR PILLARS ================= -->
+  <section class="sec" id="pillars" aria-labelledby="h-pillars">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker reveal"><span class="idx">04</span>How we help</p>
+        <!-- SWAP: pillars headline + sub -->
+        <h2 class="reveal" id="h-pillars" style="--d:.08s">Four pillars of menopause&nbsp;care.</h2>
+        <p class="h-lede reveal" style="--d:.16s">A glimpse of what we offer, from symptom relief today to long-term health. Your consult determines what belongs in your plan, and every plan runs under physician supervision.</p>
+      </div>
+      <div class="pillars">
+        <!-- SWAP: pillar 1 -->
+        <article class="pillar reveal">
+          <p class="p-no" aria-hidden="true">01</p>
+          <h3>Hormone and menopause care</h3>
+          <p>Personalized, physician-supervised support for the hormonal shifts of perimenopause, menopause, and the years after.</p>
+          <ul>
+            <li>Bioidentical hormone therapy (BHRT)</li>
+            <li>Hormone pellet therapy</li>
+            <li>Thyroid optimization</li>
+            <li>Perimenopause and menopause management</li>
+            <li>Ongoing monitoring and titration</li>
+          </ul>
+          <p class="p-benefit">Built around your labs and your symptoms, never one-size-fits-all.</p>
+        </article>
+        <!-- SWAP: pillar 2 -->
+        <article class="pillar reveal" style="--d:.08s">
+          <p class="p-no" aria-hidden="true">02</p>
+          <h3>Hormone and lab testing</h3>
+          <p>Know your numbers before you optimize. Testing is the foundation of safe, effective care.</p>
+          <ul>
+            <li>Estradiol, progesterone, and testosterone</li>
+            <li>Full thyroid panel</li>
+            <li>Metabolic and blood-sugar markers</li>
+            <li>Micronutrient analysis</li>
+            <li>Bone and cardiovascular risk markers</li>
+          </ul>
+          <p class="p-benefit">Identifies what is actually driving your symptoms, so treatment is targeted, not guesswork.</p>
+        </article>
+        <!-- SWAP: pillar 3 -->
+        <article class="pillar reveal" style="--d:.16s">
+          <p class="p-no" aria-hidden="true">03</p>
+          <h3>Metabolism and body composition</h3>
+          <p>Support for the metabolic changes that often arrive with menopause.</p>
+          <ul>
+            <li>Physician-supervised weight management</li>
+            <li>InBody composition scans</li>
+            <li>Metabolic boost injections</li>
+            <li>Muscle and strength support</li>
+            <li>Nutrition guidance</li>
+          </ul>
+          <p class="p-benefit">Helps protect muscle, energy, and long-term metabolic health.</p>
+        </article>
+        <!-- SWAP: pillar 4 -->
+        <article class="pillar reveal" style="--d:.24s">
+          <p class="p-no" aria-hidden="true">04</p>
+          <h3>Energy, skin, and vitality</h3>
+          <p>Restore the everyday vitality that hormonal change can take away.</p>
+          <ul>
+            <li>IV and nutrient therapy</li>
+            <li>NAD+ therapy</li>
+            <li>Hair and skin support</li>
+            <li>Bone and joint support</li>
+            <li>Sexual and vaginal wellness</li>
+          </ul>
+          <p class="p-benefit">Supports energy, recovery, skin, hair, and intimate health from the inside out.</p>
+        </article>
+      </div>
+      <div class="sec-cta reveal" style="--d:.28s">
+        <a class="btn" href="#claim">Claim a free consult to find your plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 TEAM (PORCELAIN MEDALLIONS) ================= -->
+  <section class="sec on-light" id="team" aria-labelledby="h-team">
+    <div class="wrap">
+      <div class="sec-head centered">
+        <p class="kicker reveal"><span class="idx">05</span>Physician-led</p>
+        <!-- SWAP: team headline + lede -->
+        <h2 class="reveal" id="h-team" style="--d:.08s">Medical leadership you can&nbsp;trust.</h2>
+        <p class="h-lede reveal" style="--d:.16s">Biohackr Health is a medical clinic first. Every menopause care plan runs under physician supervision, led by a board-certified OB/GYN who has spent her career in women's hormone health.</p>
+      </div>
+      <div class="team-grid">
+        <!-- SWAP: team member 1 -->
+        <article class="member reveal">
+          <div class="medal"><div class="plate"><img class="ph" src="assets/team-bluvas.jpg" width="600" height="600" alt="Portrait of Dr. Lori Bluvas" loading="lazy" decoding="async"></div></div>
+          <h3>Dr. Lori Bluvas, MD</h3>
+          <span class="caps">CEO &amp; Co-founder</span>
+          <p>Dr. Lori Bluvas is a Board-Certified OB/GYN with over 25 years of experience specializing in menopause, women's longevity, and hormone optimization. She brings advanced training from Brown University to help Bay Area women optimize their health at every stage of life.</p>
+        </article>
+        <!-- SWAP: team member 2 -->
+        <article class="member reveal" style="--d:.1s">
+          <div class="medal"><div class="plate"><img class="ph warm" src="assets/team-greenberg.png" width="600" height="600" alt="Portrait of Dr. Lauren Greenberg" loading="lazy" decoding="async"></div></div>
+          <h3>Dr. Lauren Greenberg, MD</h3>
+          <span class="caps">Co-owner &amp; Partner</span>
+          <p>Dr. Lauren Greenberg is a Board-Certified Plastic Surgeon with training from Dartmouth, Northwestern, and Stanford. Since 1999, she has operated a boutique practice on Stanford's campus, specializing in aesthetic surgery and regenerative treatments.</p>
+        </article>
+        <!-- SWAP: team member 3 -->
+        <article class="member reveal" style="--d:.2s">
+          <div class="medal"><div class="plate"><img class="ph" src="assets/team-habibi.png" width="600" height="600" alt="Portrait of Atousa Habibi" loading="lazy" decoding="async"></div></div>
+          <h3>Atousa Habibi, RN</h3>
+          <span class="caps">Chief Operations Officer</span>
+          <p>Atousa is a Registered Nurse with 12+ years of experience in aesthetics and clinical operations. She is a former VP at Lookout Health, where she managed multiple clinics delivering thousands of treatments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 WHY BIOHACKR (SCENIC) ================= -->
+  <section class="sec scenic" id="why" aria-labelledby="h-why">
+    <div class="wrap">
+      <div class="sec-head centered">
+        <p class="kicker reveal"><span class="idx">06</span>Why Biohackr Health</p>
+        <!-- SWAP: why headline + intro -->
+        <h2 class="reveal" id="h-why" style="--d:.08s">Menopause care, done&nbsp;right.</h2>
+        <p class="h-lede reveal" style="--d:.16s">We are not just a clinic. We started Biohackr Health to bring real science to our own health, and we understand the changes you are going through, because we are going through them too.</p>
+      </div>
+      <div class="standards">
+        <!-- SWAP: standard plates (4) -->
+        <article class="standard reveal"><span class="caps">01</span><h3>Advanced diagnostics</h3><p>We test before we treat. Your plan starts with your hormones and your numbers, not a template.</p></article>
+        <article class="standard reveal" style="--d:.06s"><span class="caps">02</span><h3>Personalized treatment</h3><p>No two women experience menopause the same way. Your protocol is built around your biology, your symptoms, and your goals.</p></article>
+        <article class="standard reveal" style="--d:.12s"><span class="caps">03</span><h3>Compassionate care</h3><p>Physician-led, judgment-free, and unhurried. You will feel heard, not rushed, and not dismissed.</p></article>
+        <article class="standard reveal" style="--d:.18s"><span class="caps">04</span><h3>Science you can trust</h3><p>Evidence-based protocols and high-quality, third-party tested supplements wherever possible.</p></article>
+      </div>
+      <!-- SWAP: pull line + CTA -->
+      <div class="guess-line reveal" style="--d:.22s">
+        <p>Don't <strong>guess</strong> your way through menopause.</p>
+        <a class="btn" href="#claim">Get free medical guidance</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 HOW IT WORKS (LEDGER) ================= -->
+  <section class="sec" id="how" aria-labelledby="h-how">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker reveal"><span class="idx">07</span>The process</p>
+        <!-- SWAP: how headline + lede -->
+        <h2 class="reveal" id="h-how" style="--d:.08s">From first call to feeling like&nbsp;yourself.</h2>
+      </div>
+      <div class="steps">
+        <!-- SWAP: step row 1 -->
+        <div class="step reveal">
+          <p class="step-no" aria-hidden="true">01</p>
+          <h3>Claim your free consult</h3>
+          <p>30 minutes, in person or by phone, with no credit card and no commitment. We listen first: your symptoms, your history, and your goals.</p>
+          <div class="plate"><img class="ph" src="assets/consult-table-ai.jpg" width="1080" height="1350" alt="A clinician talks through goals and history with a client at the consult table" loading="lazy" decoding="async"></div>
+        </div>
+        <!-- SWAP: step row 2 -->
+        <div class="step reveal" style="--d:.08s">
+          <p class="step-no" aria-hidden="true">02</p>
+          <h3>Get your baseline</h3>
+          <p>Where it helps, we measure what is really going on: hormones, thyroid, metabolism, and key longevity markers, so the plan targets the cause, not the noise.</p>
+          <div class="plate"><img class="ph" src="assets/baseline-blood-draw-ai.jpg" width="1080" height="1350" alt="A gloved clinician racks blood collection tubes for baseline lab testing" loading="lazy" decoding="async"></div>
+        </div>
+        <!-- SWAP: step row 3 -->
+        <div class="step reveal" style="--d:.16s">
+          <p class="step-no" aria-hidden="true">03</p>
+          <h3>Your personalized plan</h3>
+          <p>A plan built for your biology and your stage of life, delivered by our clinical team under physician supervision in San Francisco or Palo Alto.</p>
+          <div class="plate"><img class="ph" src="assets/plan-consult-ai.jpg" width="1080" height="1350" alt="A physician walks a patient through her personalized plan at the consult table" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+      <!-- SWAP: how small print -->
+      <p class="how-note reveal">Hormone therapy is prescribed only after a clinical evaluation and a review of your labs. It is not suitable for everyone, and if it is not right for you, your physician will say so plainly.</p>
+    </div>
+  </section>
+
+  <!-- ================= 08 GOOGLE REVIEWS ================= -->
+  <section class="sec raised g-reviews" aria-label="What clients say on Google">
+    <div class="wrap">
+      <p class="kicker reveal" style="justify-content:center"><span class="idx">08</span>Reviews</p>
+      <p class="stars reveal">From our Google reviews</p>
+      <!-- Live reviews: the same GHL/LeadConnector widget the sibling pages embed
+           (widget vscbiVBPwkbdhVINAGjF). It pulls the clinic's synced Google reviews
+           and updates automatically as new reviews are written. -->
+      <div class="g-frame"><p class="g-loading" aria-hidden="true">Loading our live Google reviews</p><iframe id="msgsndr_reviews" class="reveal" title="Biohackr Health Google reviews" src="https://backend.leadconnectorhq.com/appengine/reviews/get_widget/vscbiVBPwkbdhVINAGjF" frameborder="0" scrolling="auto"></iframe></div>
+      <a class="g-link reveal" style="--d:.14s" href="https://www.google.com/search?q=biohackr+health#lrd=0x808581657af64d31:0x1a2a2a9bc73a82fc,1,,," target="_blank" rel="noopener">Read all our reviews on Google</a>
+    </div>
+  </section>
+
+  <!-- ================= 09 FAQ ================= -->
+  <section class="sec" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sec-head centered">
+        <p class="kicker reveal"><span class="idx">09</span>Questions</p>
+        <!-- SWAP: faq headline -->
+        <h2 class="reveal" id="h-faq" style="--d:.08s">Good to&nbsp;know.</h2>
+      </div>
+      <!-- SWAP: faq pairs (7) -->
+      <div class="faq reveal" style="--d:.14s">
+        <details>
+          <summary>What happens at the free consult?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">A 30-minute conversation with our clinical team, in person in San Francisco or Palo Alto, or by phone. We review your symptoms, health history, and goals, then map out which options make sense for you. You leave with a clear plan, whether or not you book anything.</p>
+        </details>
+        <details>
+          <summary>I am in perimenopause, or already past menopause. Is this for me?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">Yes. We care for women across the whole transition: perimenopause (the years of change that can begin in your late 30s or 40s), menopause, and the years after. Wherever you are, the consult starts with where you are.</p>
+        </details>
+        <details>
+          <summary>Do I have to start hormone therapy?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">No. The consult is about understanding your body and your options. Hormone therapy is one path we may discuss, but only if it is right for you. Many plans combine several approaches, and some do not involve hormones at all.</p>
+        </details>
+        <details>
+          <summary>Is hormone therapy safe?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">Hormone therapy is a well-established medical option, but it is not right for everyone. Our physicians review your full history and labs, walk you through the benefits and risks for your situation, and monitor you over time. Everything is personalized and physician-supervised.</p>
+        </details>
+        <details>
+          <summary>Is it really free?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">Yes. The menopause consultation is complimentary (usually $100). No credit card is required to claim a spot, and there is no obligation.</p>
+        </details>
+        <details>
+          <summary>Who will I be working with?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">Biohackr Health is led by board-certified physicians, including OB/GYN Dr. Lori Bluvas, and staffed by licensed, experienced registered nurses. Every plan runs under physician supervision.</p>
+        </details>
+        <details>
+          <summary>Where are you located?<span class="pm" aria-hidden="true"></span></summary>
+          <p class="ans">San Francisco, 1877 Union Street in the Marina, and Palo Alto, 540 Bryant Street. Phone consults are available if visiting is not convenient.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <!-- SWAP: footer logo + brand line -->
+        <img src="assets/logo-white.png" alt="Biohackr Health" width="720" height="120">
+        <p>Physician-led menopause, perimenopause, and hormone care in San Francisco and Palo Alto. Science first, testing before treatment, and plans built around your biology.</p>
+      </div>
+      <div>
+        <h3>San Francisco</h3>
+        <!-- SWAP: SF address -->
+        <address><strong>Biohackr Health, Marina</strong><br>
+        <a href="https://goo.gl/maps/8pzTGUEau1jUC3kdA" target="_blank" rel="noopener" class="addr-link">1877 Union Street<br>San Francisco, CA 94123</a><br>
+        Mon to Fri, 10am to 6pm<br>Sat, 10am to 4pm</address>
+      </div>
+      <div>
+        <h3>Palo Alto</h3>
+        <!-- SWAP: Palo Alto address -->
+        <address><strong>Biohackr Health, Downtown</strong><br>
+        <a href="https://goo.gl/maps/CsZk6nJtbnXJgPLYA" target="_blank" rel="noopener" class="addr-link">540 Bryant Street<br>Palo Alto, CA 94301</a><br>
+        Mon to Fri, 10:30am to 6pm<br>Sat, 10am to 4pm</address>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <!-- SWAP: contact + legal links -->
+        <div class="foot-links">
+          <a href="tel:+16503701588">(650) 370-1588</a>
+          <a href="https://www.biohackr.health" target="_blank" rel="noopener">biohackr.health</a>
+          <a href="https://www.biohackr.health/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="https://www.biohackr.health/shop/" target="_blank" rel="noopener">Biohackr Skin</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <!-- SWAP: legal small print + medical disclaimer -->
+      <p>&copy; 2026 Biohackr Health | All Rights Reserved | <a class="pp-link" href="https://www.biohackr.health/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
+      <p>The information on this page is for general educational purposes only and is not medical advice. It is not intended to diagnose, treat, cure, or prevent any disease. Hormone therapy and other treatments are provided only after a clinical evaluation and are not suitable for everyone. Individual results vary. These statements have not been evaluated by the FDA. Please consult a qualified healthcare provider about your individual situation. If this is a medical emergency, call 911.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  document.documentElement.classList.add("js");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ===== BESPOKE MOTION (safe to delete): the arc =====
+     The transition line draws itself across the three stages, the stage
+     nodes bloom in order, and the pulses stay ambient only while the
+     box is on screen. */
+  var arc = document.querySelector(".arc-svg");
+  var arcBox = document.querySelector(".arc-box");
+  if (arc) {
+    if (reduced || !("IntersectionObserver" in window)) {
+      arc.classList.add("in");
+    } else {
+      var aio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { arc.classList.add("in"); aio.disconnect(); }
+        });
+      }, { threshold: 0.2 });
+      aio.observe(arc);
+      if (arcBox) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { arcBox.classList.toggle("live", e.isIntersecting); });
+        }, { threshold: 0.05 }).observe(arcBox);
+      }
+    }
+  }
+  /* Arc stage tabs: click + arrow keys move selection, panels swap via
+     hidden. First panel shows by default, so no-JS still reads stage one. */
+  var atabs = Array.prototype.slice.call(document.querySelectorAll('.arc-cap[role="tab"]'));
+  function selectArcTab(tab, focus) {
+    atabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      var panel = document.getElementById(t.getAttribute("aria-controls"));
+      if (panel) panel.hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  atabs.forEach(function (tab, i) {
+    tab.addEventListener("click", function () { selectArcTab(tab, false); });
+    tab.addEventListener("keydown", function (e) {
+      var j = null;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") { j = (i + 1) % atabs.length; }
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { j = (i - 1 + atabs.length) % atabs.length; }
+      else if (e.key === "Home") { j = 0; }
+      else if (e.key === "End") { j = atabs.length - 1; }
+      if (j !== null) { e.preventDefault(); selectArcTab(atabs[j], true); }
+    });
+  });
+  /* ===== end bespoke motion ===== */
+
+  /* Transform-only reveals */
+  var els = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if (reduced || !("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -5% 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  /* Video slots: play only on screen, fade in over the still when actually playing.
+     Slots ship with no src; they stay stills until a real clip is added. */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-autoplay]"), function (slot) {
+    var v = slot.querySelector("video");
+    if (!v) return;
+    if (reduced) { v.removeAttribute("autoplay"); try { v.pause(); } catch (e) {} return; }
+    v.addEventListener("playing", function () { slot.classList.add("video-live"); });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (v.hidden || !v.currentSrc) return;
+          if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+          else { try { v.pause(); } catch (err) {} }
+        });
+      }, { threshold: 0.12 }).observe(slot);
+    } else if (v.currentSrc && !v.hidden) {
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+    }
+  });
+
+  /* Treatments rail arrows */
+  var rail = document.querySelector("[data-rail]");
+  var prev = document.querySelector("[data-rail-prev]");
+  var next = document.querySelector("[data-rail-next]");
+  function railStep(dir) {
+    if (!rail) return;
+    var card = rail.querySelector(".tcard");
+    var step = card ? card.getBoundingClientRect().width + 18 : 320;
+    rail.scrollBy({ left: dir * step, behavior: reduced ? "auto" : "smooth" });
+  }
+  if (prev) prev.addEventListener("click", function () { railStep(-1); });
+  if (next) next.addEventListener("click", function () { railStep(1); });
+
+  /* Header backdrop */
+  var top = document.querySelector(".top");
+  function onScroll() { if (top) top.classList.toggle("scrolled", window.scrollY > 20); }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* Unwired forms: honest, never pretend to submit */
+  Array.prototype.forEach.call(document.querySelectorAll(".form-card"), function (form) {
+    if (form.getAttribute("action") === "#") {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var s = form.querySelector(".f-status");
+        if (s) {
+          s.textContent = "This form is not connected yet. Call (650) 370-1588, or wire the form action to the campaign intake before launch.";
+          s.classList.add("show");
+        }
+      });
+    }
+  });
+
+  // GHL reviews widget helper (auto-sizes the #msgsndr_reviews iframe).
+  // Loaded dynamically to keep the page's single-script invariant.
+  var rw = document.createElement("script");
+  rw.src = "https://apisystem.tech/js/reviews_widget.js";
+  rw.defer = true;
+  document.body.appendChild(rw);
+})();
+</script>
+</body>
+</html>
