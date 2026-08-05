@@ -119,6 +119,7 @@
   ::selection{background:var(--red);color:#fff}
   :focus-visible{outline:2px solid var(--red-bright);outline-offset:3px}
   section[id]{scroll-margin-top:var(--header-h)}
+  #claim-form{scroll-margin-top:calc(var(--header-h) + 14px)}
   body.no-scroll{overflow:hidden}
 
   .skip-link{position:absolute;left:-999px;top:0;z-index:300;background:var(--red);color:#fff;
@@ -635,7 +636,7 @@
       <!-- SWAP: phone number (also update tel links below) -->
       <a class="top-tel" href="tel:+16503701588">(650) 370-1588</a>
       <!-- SWAP: header CTA target -->
-      <a class="btn" href="#claim">Claim free consult</a>
+      <a class="btn" href="#claim-form">Claim free consult</a>
     </div>
   </div>
 </header>
@@ -661,7 +662,7 @@
         <p class="hero-sub reveal" style="--d:.16s">Led by a board-certified OB/GYN with over 25 years of experience. Personalized treatment for perimenopause, menopause, and the years after, grounded in real testing instead of guesswork. Start with a free 30-minute consult, in person or by phone.</p>
         <div class="hero-ctas reveal" style="--d:.24s">
           <!-- SWAP: primary CTA -->
-          <a class="btn" href="#claim">Claim my free consult</a>
+          <a class="btn" href="#claim-form">Claim my free consult</a>
           <!-- SWAP: secondary link -->
           <a class="link-quiet" href="#pillars">Browse what we offer <span aria-hidden="true">&rarr;</span></a>
         </div>
@@ -671,7 +672,7 @@
         <p class="hero-note reveal" style="--d:.38s"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg>No treatment without a clinical evaluation, and hormone therapy is not right for everyone.</p>
       </div>
       <!-- SWAP: hero form action (point at the campaign intake webhook before launch) -->
-      <form class="form-card reveal" style="--d:.2s" action="#" method="post" aria-labelledby="h-form-hero">
+      <form class="form-card reveal" id="claim-form" style="--d:.2s" action="#" method="post" aria-labelledby="h-form-hero">
         <p class="f-kicker">Usually $100, free this month</p>
         <h3 id="h-form-hero">Claim your free menopause consult</h3>
         <p class="sub">30 minutes with our clinical team, in person or by phone.</p>
@@ -730,7 +731,7 @@
       <!-- SWAP: signs reassurance line + CTA -->
       <p class="signs-line reveal" style="--d:.2s">These changes are common, but you do not have to just <strong>live with&nbsp;them.</strong></p>
       <div class="sec-cta reveal" style="--d:.26s">
-        <a class="btn" href="#claim">Claim my free menopause consult</a>
+        <a class="btn" href="#claim-form">Claim my free menopause consult</a>
         <p class="fine">Free consultation, takes 30 minutes, limited spots each month.</p>
       </div>
     </div>
@@ -746,7 +747,7 @@
           <h2 class="reveal" id="h-offer" style="--d:.08s">Your free menopause&nbsp;consult.</h2>
           <p class="h-lede reveal" style="--d:.16s">A complimentary 30-minute consultation with our clinical team, in person in San Francisco or Palo Alto, or by phone. We will talk through your symptoms, your history, and your goals, and map out a personalized plan for this stage of life.</p>
           <div class="sec-cta reveal" style="--d:.28s">
-            <a class="btn" href="#claim">Claim my free consult</a>
+            <a class="btn" href="#claim-form">Claim my free consult</a>
           </div>
         </div>
         <!-- SWAP: consult perks checklist -->
@@ -830,7 +831,7 @@
             <li>A real review of sleep, mood, cycles, and symptoms, unhurried.</li>
             <li>A plan that tracks the shift as it happens, not a one-time guess.</li>
           </ul>
-          <p class="stage-cta"><a class="link-quiet" href="#claim">Tell us where you are, at your free consult <span aria-hidden="true">&rarr;</span></a></p>
+          <p class="stage-cta"><a class="link-quiet" href="#claim-form">Tell us where you are, at your free consult <span aria-hidden="true">&rarr;</span></a></p>
         </div>
       </div>
       <!-- SWAP: arc stage panel 2 -->
@@ -843,7 +844,7 @@
             <li>An honest physician conversation about whether hormone therapy fits you.</li>
             <li>Support for sleep, energy, mood, and body composition, monitored over time.</li>
           </ul>
-          <p class="stage-cta"><a class="link-quiet" href="#claim">Map your options at a free consult <span aria-hidden="true">&rarr;</span></a></p>
+          <p class="stage-cta"><a class="link-quiet" href="#claim-form">Map your options at a free consult <span aria-hidden="true">&rarr;</span></a></p>
         </div>
       </div>
       <!-- SWAP: arc stage panel 3 -->
@@ -856,7 +857,7 @@
             <li>Muscle, strength, and metabolism support that protects the long game.</li>
             <li>Scheduled re-testing, so your plan ages as well as you do.</li>
           </ul>
-          <p class="stage-cta"><a class="link-quiet" href="#claim">Start your baseline at a free consult <span aria-hidden="true">&rarr;</span></a></p>
+          <p class="stage-cta"><a class="link-quiet" href="#claim-form">Start your baseline at a free consult <span aria-hidden="true">&rarr;</span></a></p>
         </div>
       </div>
       <!-- SWAP: arc footnote -->
@@ -932,7 +933,7 @@
         </article>
       </div>
       <div class="sec-cta reveal" style="--d:.28s">
-        <a class="btn" href="#claim">Claim a free consult to find your plan</a>
+        <a class="btn" href="#claim-form">Claim a free consult to find your plan</a>
       </div>
     </div>
   </section>
@@ -991,7 +992,7 @@
       <!-- SWAP: pull line + CTA -->
       <div class="guess-line reveal" style="--d:.22s">
         <p>Don't <strong>guess</strong> your way through menopause.</p>
-        <a class="btn" href="#claim">Get free medical guidance</a>
+        <a class="btn" href="#claim-form">Get free medical guidance</a>
       </div>
     </div>
   </section>
